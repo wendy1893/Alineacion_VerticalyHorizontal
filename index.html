@@ -1,0 +1,122 @@
+<!-- elementos inline
+Tamaño fijo width | calc este significa tamaño fijo ancho y otra con calc
+display inline-block
+posicion absoluta width | left + margin | %
+flex
+tablas
+
+tablas
+padding
+flex
+line-height
+vertical-align
+ -->
+
+<!-- E63946 rojo
+    F1FAEE blanco
+    A8DADC celeste
+    457B9D sky blue
+    1D3557 azul
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Desafio 4 centrar horizontal y verticamente</title>
+</head>
+<body>
+    <h2>Alineaciones Horizontales</h2>
+    <h2>Tamaño fijo con Ancho declarado</h2>
+    <div class="caja tipo-a">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium magnam laboriosam iste excepturi repellat. Quia cupiditate illo quis officiis? Error eum, dolore dolores ipsum molestiae rerum praesentium culpa eligendi odit. </p>
+    </div>
+    <h2>Tamaño fijo usando calc( )</h2>
+    <div class="caja tipo-b">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium magnam laboriosam iste excepturi repellat. Quia cupiditate illo quis officiis? Error eum, dolore dolores ipsum molestiae rerum praesentium culpa eligendi odit. </p>
+    </div>
+
+    <h2>Elementos con display inline-block</h2>
+    <div class="tipo-c">
+        <div class="caja">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium magnam laboriosam iste excepturi repellat. Quia cupiditate illo quis officiis? Error eum, dolore dolores ipsum molestiae rerum praesentium culpa eligendi odit. </p>
+        </div>
+        <div class="caja">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium magnam laboriosam iste excepturi repellat. Quia cupiditate illo quis officiis? Error eum, dolore dolores ipsum molestiae rerum praesentium culpa eligendi odit. </p>
+            </div>
+            <div class="caja">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium magnam laboriosam iste excepturi repellat. Quia cupiditate illo quis officiis? Error eum, dolore dolores ipsum molestiae rerum praesentium culpa eligendi odit. </p>
+                </div>
+    </div>
+    <h2>Elementos con posicion Absoluta A</h2>
+    <div class="relative"> <!-- hacemos un relative porque lo de adentro sera absolute y este elemento interno se alinea con respecto al elemento relative mas cercano que tenga o en su defecto el borde -->
+        <div class="tipo-d caja">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium magnam laboriosam iste excepturi repellat. Quia cupiditate illo quis officiis? Error eum, dolore dolores ipsum molestiae rerum praesentium culpa eligendi odit. </p>
+        </div>
+    </div>
+
+    <h2>Elementos con posicion Absoluta B</h2>
+    <div class="relative"> <!-- hacemos un relative porque lo de adentro sera absolute y este elemento interno se alinea con respecto al elemento relative mas cercano que tenga o en su defecto el borde -->
+        <div class="tipo-e caja">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium magnam laboriosam iste excepturi repellat. Quia cupiditate illo quis officiis? Error eum, dolore dolores ipsum molestiae rerum praesentium culpa eligendi odit. </p>
+        </div>
+    </div>
+
+    <h2>Elementos con display Flex</h2>
+    <div class="flex tipo-f"> 
+            <div class="caja">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium magnam laboriosam iste excepturi repellat. Quia cupiditate illo quis officiis? Error eum, dolore dolores ipsum molestiae rerum praesentium culpa eligendi odit. </p>
+        </div>
+        <div class="caja">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium magnam laboriosam iste excepturi repellat. Quia cupiditate illo quis officiis? Error eum, dolore dolores ipsum molestiae rerum praesentium culpa eligendi odit. </p>
+        </div>
+    </div>
+
+    <h2>Alineaciones Verticales</h2>
+
+    <h2>Elementos con display table con ultra soporte a IE</h2>
+    <div class="tipo-g"> 
+            <div class=" caja">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium magnam laboriosam iste excepturi repellat. Quia cupiditate illo quis officiis? Error eum, dolore dolores ipsum molestiae rerum praesentium culpa eligendi odit. </p>
+        </div>
+        <div class=" caja">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium magnam laboriosam iste excepturi repellat. Quia cupiditate illo quis officiis? Error eum, dolore dolores ipsum molestiae rerum praesentium culpa eligendi odit. </p>
+        </div>
+    </div>
+
+    <h2>Elementos centrados con padding</h2>
+    <div class="tipo-h height"> 
+            <div class="caja">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium magnam laboriosam iste excepturi repellat. Quia cupiditate illo quis officiis? Error eum, dolore dolores ipsum molestiae rerum praesentium culpa eligendi odit. </p>
+        </div>
+    </div>
+
+    <h2>Centrado Vertical con flex</h2>
+    <div class="tipo-i height"> 
+            <div class="caja">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium magnam laboriosam iste excepturi repellat. Quia cupiditate illo quis officiis? Error eum, dolore dolores ipsum molestiae rerum praesentium culpa eligendi odit. </p>
+        </div>
+    </div>
+
+    <h2>Centrar verticalmente elementos de una sola linea</h2>
+    <div class="height">  <!-- este funciona muy bien con botones este tipo de centrado --> 
+            <p class="tipo-j">Hola Mundo!</p>
+    </div>
+
+    <h2>Centrar contenido mixto verticalmente</h2>
+    <!-- aqui primero tenemos la imagen debajo el username y abajo un ver mas 
+    la imagen tiene un display inline el span tiene un display inline y el div tiene un display block
+por eso es que los dos primeros elementos se posicionan juntos y el div el ver mas no se esta junto
+porque tiene un display block ocupa todo el ancho, toma todo su bloque -->
+    <article class="tipo-k"> 
+        <img src="invie-classic.png" width="200px" height="200px" alt="">
+        <span>@InvieClassic</span>
+        <div> Ver mas... </div>
+    </article>
+
+
+</body>
+</html>

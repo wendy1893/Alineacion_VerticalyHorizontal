@@ -1,0 +1,113 @@
+body{
+    background-color: #1D3557;
+    color: #F1FAEE;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding-bottom:200px;
+}
+
+.caja{
+    width: 200px;
+    border: 1px solid #A8DADC;
+    margin-bottom: 50px;
+}
+
+.tipo-a{
+    margin: 0 auto; /* como tenemos un tamaño y un display block determinado simplemente con poner eso margenes se centra */
+}
+
+.tipo-b{
+    margin-left: calc(100vw / 2 - 100px); /* a esto le resto la mitad de lo que seria mi ancho y se centra se movio un poquito porque el body tiene un margen de 8px entonces se lo ponemos a cero */
+}
+
+.tipo-c{
+    border-top:1px solid #457B9D; 
+    padding: 10px;
+    text-align: center;
+}
+/* elementos con display inline-block heredan elementos desde el padre asi que le podemos dar desde 
+el padre para que hereden su alineacion y es como alinear un texto con text-align:center; */
+.tipo-c .caja{
+    display: inline-block; /* con esto se posicionan una al lado de la otra */
+    text-align: left; /* esto se coloca si queremos que el texto mantenga su alineado a la izquierda */
+}
+
+.relative{ /* le colocamos a los elementos relative un tamaño para que contengan a los elementos de posicion absoluta a parte del padding que tiene el body*/
+    position: relative;
+    border: 1px solid #457B9D;  
+    height: 400px;  /* esta clase de alineaciones centradas se usan mucho a la hora de hacer modales
+                    asi que si quieres hacer un modal o livebox esta es la estrategia */
+
+}
+
+.tipo-d{
+    position: absolute;
+    left: 0; /* con esto posicionamos el elemento tanto hacia arriba y hacia la izquierda del elemento relative */
+    right: 0;   /* tiene que tener un ancho definido listo con caja ahora tiene que tener right 0 */
+    margin: 0 auto;    /* tal como centramos un elemento que tiene un ancho definido */
+/* puedo ponerle que tenga un top definido en cero o en este caso no se lo vamos a poner */
+}
+
+.tipo-e{
+    position: absolute;
+    left:50%; /* vamos a restarle en margenes izquierdos negativos la mitad del ancho definido*/
+    margin-left: -100px; /* que sea la mitad de ese ancho para que se posicione */
+}
+
+.tipo-f{
+display: flex; /* estos elementos con display flex lo que hacen es afectar con diferentes propiedades a los hijos */
+                /* esto lo que hace es posicionar los elementos uno al lado del otro */
+justify-content: center; /* esto lo centra horizontalmente */
+}   
+
+/* para darle soporte a navegadores como internet explorer 6 podemos usar estos elemetos de abajo*/
+
+.tipo-g{
+    display: table;
+    width: 100%; /* hay que darle un tamaño para poder alinearlas */
+    height: 500px;
+}
+
+.tipo-g .caja{
+    display: table-cell; /* con esto si tenemos algo parecido a lo que hicmos con display flex */
+    width: 100px;
+    vertical-align: middle; /* y con esto alineamos verticalmente pero teniamos que darle antes un alto de 500px */
+}
+
+.height{
+    background: #E63946;
+    height: 500px;
+}
+
+.tipo-h{
+    height: 500px;
+    box-sizing: border-box;
+    padding-top:150px; /* si tienes 200 de alto lacaja tiene 500 de alto el padre quedan 300 seria la mitad 150 para centrarlo */
+}
+
+/* todos los elementos que querramos centrar verticalmente tenemos que ponerle un alto designado */
+/* como estamos usando mucho el alto y el backgroud creamos una clase height para colocarla a los que la usen */
+.tipo-i{
+    display: flex;
+    align-items: center; /* este centra verticalmente  */
+}
+
+
+/* para centrar elementos que tengan un alto declarado y que sean de una sola linea es tomar su alto 
+para ponerselo como alto de linea */
+.tipo-j{
+/* el alto de linea va a tener el alto de mi caja */
+line-height: 500px;
+/* text-align: center; *//* y si le ponemos un text-aling:center tenemos un elemtno centrado horinzontalmente tambien */
+}
+ 
+
+/* primero hagamos que este juntos, hacems que todos los elementos que esten dentro de tipo-k
+con el selector universal todos tengan display inline */
+
+.tipo-k >* {
+    display: inline;
+    vertical-align: middle; /* ya al colocarle a todos el inline con vertical-align se colocan en elcentro con middle
+                            esto se usa mucho cuando quieras colocar una imagen y el texto que le
+                            siga este centredo se hace con esto. */
+}
